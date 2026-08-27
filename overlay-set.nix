@@ -17,5 +17,5 @@ let
 in
 {
   op-energy-api-swagger-ui = op-energy-api-swagger-ui;
-  op-energy-api-swagger-ui-vhost-config = import ./nginx-vhost-config.nix;
+  op-energy-api-swagger-ui-nginx-vhost-config = import ./nginx-vhost-config.nix;
 }
