@@ -21,12 +21,14 @@ import           Network.Wai.Handler.Warp(run)
 
 import qualified Data.OpEnergy.API as BlockspanAPI
 import qualified Data.OpEnergy.Account.API as AccountAPI
+import qualified Data.OpEnergy.Offer.API as OfferAPI
 import qualified Config as Config
 
 type API
   = BlockspanAPI.WebSocketBackendAPI
   :<|> AccountAPI.AccountAPI
   :<|> AccountAPI.BlockTimeAPI
+  :<|> OfferAPI.OfferAPI
 
 type SwaggerAPI = "api" :> SwaggerSchemaUI "swagger-ui" "swagger.json"
 

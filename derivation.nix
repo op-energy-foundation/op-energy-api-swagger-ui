@@ -3,6 +3,7 @@
 , lens
 , op-energy-api
 , op-energy-account-api
+, op-energy-offer-api
 , servant, servant-server, servant-client, servant-jsonrpc, servant-jsonrpc-client, servant-swagger, servant-swagger-ui, swagger2
 , websockets, servant-websockets
 , aeson, aeson-pretty
@@ -23,6 +24,7 @@ mkDerivation {
     lens
     op-energy-api
     op-energy-account-api
+    op-energy-offer-api
     servant servant-server servant-client servant-jsonrpc servant-jsonrpc-client servant-swagger servant-swagger-ui swagger2
     websockets servant-websockets
     aeson aeson-pretty

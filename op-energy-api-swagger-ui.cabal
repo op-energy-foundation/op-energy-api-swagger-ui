@@ -57,6 +57,7 @@ library
                     , wai
                     , op-energy-api
                     , op-energy-account-api
+                    , op-energy-offer-api
     ghc-options:    -O2 -Wall -Werror -Wno-unticked-promoted-constructors -fno-warn-name-shadowing -Wno-orphans
     default-extensions:       OverloadedStrings
                             , ScopedTypeVariables
