@@ -19,11 +19,18 @@ in
     };
     "${URL_BASE}api/swagger-ui" = {
       proxyPass = "${API_HOST}/api/swagger-ui";
-      extraConfig = if zones_enabled
-        then ''
-          limit_req zone=api burst=10 nodelay;
-        ''
-        else "";
+      extraConfig = let
+          zones_config = if zones_enabled
+          then ''
+            limit_req zone=api burst=10 nodelay;
+          ''
+          else "";
+        in
+          ''
+            ${zones_config}
+            add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;" always;
+          '';
+
     };
   };
 }
